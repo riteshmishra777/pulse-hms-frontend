@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  /* 🌿 Brand Colors */
+  --brand-primary:   #16a34a;
+  --brand-secondary: #22c55e;
+  --brand-accent:    #15803d;
+  --brand-success:   #16a34a;
+  --brand-warning:   #f59e0b;
+  --brand-danger:    #ef4444;
+
+  /* 🌿 Background System (UPDATED) */
+  --surface-page:    #e6f4ea;
+  --surface-card:    #ffffff;
+  --surface-raised:  #f0fdf4;
+  --surface-border:  #dcfce7;
+  --surface-hover:   #bbf7d0;
+  --surface-input:   #f9fafb;
+
+  /* 🌿 Sidebar */
+  --sidebar-bg:      #052e16;
+  --sidebar-text:    #86efac;
+  --sidebar-active:  #16a34a;
+  --sidebar-hover:   rgba(255,255,255,0.06);
+  --sidebar-border:  rgba(255,255,255,0.08);
+
+  /* 🌿 Text */
+  --text-primary:    #052e16;
+  --text-secondary:  #166534;
+  --text-muted:      #6b7280;
+  --text-inverse:    #ffffff;
+
+  /* 🌿 Shadows (IMPROVED DEPTH) */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg:  0 10px 30px rgba(0,0,0,0.10);
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.06);
+
+  /* 🌿 Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* 🌿 Layout */
+  --sidebar-width: 256px;
+  --header-height: 64px;
+
+  /* 🌿 Fonts */
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+/* 🔥 GLOBAL RESET (IMPORTANT FIX) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* REMOVE WHITE BORDER / SCROLL GAP */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent extra spacing */
+body {
+  background: #e6f4ea;
+}
+
+/* 🌿 BODY BACKGROUND (UPDATED GRADIENT) */
+body {
+  font-family: var(--font-body);
+  background: 
+    radial-gradient(circle at top left, #bbf7d0, transparent 40%),
+    radial-gradient(circle at bottom right, #86efac, transparent 40%),
+    var(--surface-page);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* 🌿 SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #86efac;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4ade80;
+}
+
+/* 🌿 ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-in {
+  animation: fadeInUp 0.3s ease both;
+}
